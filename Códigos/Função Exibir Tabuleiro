@@ -1,1 +1,15 @@
+// Função para exibir o tabuleiro 
+void ExibirTabuleiro(char tab[3][3]) {
+    cout << endl;
+    cout << "a  " << tab[0][0] << " | " << tab[0][1] << " | " << tab[0][2] << endl;
+    cout << "   _________" << endl;
+    cout << endl;
+    cout << "b  " << tab[1][0] << " | " << tab[1][1] << " | " << tab[1][2] << endl;
+    cout << "   _________" << endl;
+    cout << endl;
+    cout << "c  " << tab[2][0] << " | " << tab[2][1] << " | " << tab[2][2] << endl;
+    cout << endl;
+    cout << "   1    2    3" << endl;
+    cout << endl;
+}
 
