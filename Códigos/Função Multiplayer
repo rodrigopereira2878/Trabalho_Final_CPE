@@ -1,0 +1,37 @@
+// Multiplayer: repete partidas com (Jogador1 vs Jogador2) enquanto o usuário quiser
+void Multiplayer() {
+    // Reset dos placares ao iniciar um novo jogo
+    J1.pontuacao = 0;
+    J2.pontuacao = 0;
+
+    // Pede nome dos jogadores
+    cout << endl << "Escreva o nome do jogador 1: " << endl;
+    cin >> J1.nome;
+    cout << endl << "Escreva o nome do jogador 2: " << endl;
+    cin >> J2.nome;
+
+    while (true) {
+        // Joga uma partida
+        Jogo(J1, J2);
+
+        // Mostra placar
+        cout << "Placar: " << J1.nome << " = " << J1.pontuacao
+             << " | " << J2.nome << " = " << J2.pontuacao << endl;
+
+        // Pergunta se deseja jogar novamente
+        cout << "Gostaria de jogar novamente? (s/n)" << endl;
+        char resp;
+        cin >> resp;
+
+        if (resp == 'n' || resp == 'N') {
+            // Mostra placar final e salva em arquivo
+            cout << "Placar final: " << J1.nome << " = " << J1.pontuacao
+                 << " | " << J2.nome << " = " << J2.pontuacao << endl;
+            SalvarPlacar(J1, J2); // Arquivo é gerado aqui
+            cout << "Voltando ao menu inicial." << endl;
+            break;
+        } else {
+            cout << "Iniciando nova partida..." << endl;
+        }
+    }
+}
