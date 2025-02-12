@@ -1,0 +1,41 @@
+int main(){
+    cout << "------------------------- JOGO DA VELHA -------------------------" << endl;
+    cout << endl;
+    cout << endl;
+    cout << "Authors: " << endl;
+    cout << "Pedro Guimarães Batista - 190134763" << endl;
+    cout << "Rodrigo Correa Pereira - 190095148" << endl;
+    cout << endl;
+    cout << endl;
+
+    while(true){
+        cout << endl;
+        cout << "Opções de jogo: " << endl;
+        cout << endl;
+        cout << " - [1] ->  Multi - Player" << endl;
+        cout << " - [2] ->  Single - Player (Jogue contra o COMPUTADOR)" << endl;
+        cout << " - [3] ->  Sair" << endl;  
+        cout << endl;
+        cout << "Escolha qual opção deseja: " << endl;
+
+        int OpcaoDeJogo = 0;
+        cin >> OpcaoDeJogo;
+
+        if(OpcaoDeJogo == 1){
+            Multiplayer();
+        }
+        else if(OpcaoDeJogo == 2){ //usar switch
+            Singleplayer();
+        }
+        else if(OpcaoDeJogo == 3){
+            cout << "Obrigado por jogar!" << endl;
+            break;  // Encerra o programa
+        }
+        else{
+            cout << "Opção não disponível. Escolha novamente." << endl;
+            continue;
+        }
+    }
+
+    return 0;
+}
