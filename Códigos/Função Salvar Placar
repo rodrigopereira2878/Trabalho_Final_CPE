@@ -1,0 +1,13 @@
+// Função para salvar o placar em um arquivo TXT
+void SalvarPlacar(const Jogador& J1, const Jogador& J2) {
+    ofstream arquivo("placar.txt");
+    if (arquivo.is_open()) {
+        arquivo << "Placar final:\n";
+        arquivo << J1.nome << ": " << J1.pontuacao << " vitórias\n";
+        arquivo << J2.nome << ": " << J2.pontuacao << " vitórias\n";
+        arquivo.close();
+        cout << "Placar salvo em 'placar.txt'.\n";
+    } else {
+        cout << "Erro ao salvar o placar.\n";
+    }
+}
