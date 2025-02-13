@@ -38,7 +38,7 @@ Jogador J1 = {"", 0};
 Jogador J2 = {"", 0};
 
 // Função para salvar o placar em um arquivo TXT
-void SalvarPlacar(const Jogador& J1, const Jogador& J2) { OK
+void SalvarPlacar(const Jogador& J1, const Jogador& J2) { 
     ofstream arquivo("placar.txt");
     if (arquivo.is_open()) {
         arquivo << "Placar final:\n";
@@ -52,7 +52,7 @@ void SalvarPlacar(const Jogador& J1, const Jogador& J2) { OK
 }
 
 // Função para exibir o tabuleiro 
-void ExibirTabuleiro(char tab[3][3]) { OK
+void ExibirTabuleiro(char tab[3][3]) { 
     cout << endl;
     cout << "a  " << tab[0][0] << " | " << tab[0][1] << " | " << tab[0][2] << endl;
     cout << "   _________" << endl;
@@ -67,7 +67,7 @@ void ExibirTabuleiro(char tab[3][3]) { OK
 }
 
 // Função para verificar se há vencedor; retorna 'X' ou 'O' se houver, ou '-' se não houve
-char VerificaVencedor(char tab[3][3]) { OK
+char VerificaVencedor(char tab[3][3]) { 
     // Linhas
     for(int i = 0; i < 3; i++){
         if(tab[i][0] == tab[i][1] and tab[i][1] == tab[i][2] and tab[i][0] != '-')
@@ -86,7 +86,7 @@ char VerificaVencedor(char tab[3][3]) { OK
 }
 
 // Função para checar se não há mais espaços vazios (pra verificar empate)
-bool TabuleiroCheio(char tab[3][3]){ OK
+bool TabuleiroCheio(char tab[3][3]){ 
     for(int i = 0; i < 3; i++){
         for(int j = 0; j < 3; j++){
             if(tab[i][j] == '-') return false;
